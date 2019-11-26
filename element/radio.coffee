@@ -1,6 +1,6 @@
 import m from 'mithril'
-import debug from 'debug'
-see = debug('mmui').extend 'radio'
+# import debug from 'debug'
+# see = debug('mmui').extend 'radio'
 
 export default
   view:({attrs,children})->

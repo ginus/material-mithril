@@ -5,7 +5,9 @@
   "main": "index.coffee",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "coffee build.coffee"
+    "index": "coffee genIndex.coffee",
+    "start": "parcel watch index.coffee",
+    "build": "parcel build index.coffee"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,10 @@
   },
   "homepage": "https://github.com/ginus/material-mithril#readme",
   "dependencies": {
-    "coffeescript": "^2.4.1"
+    "coffeescript": "^2.4.1",
+    "debug": "^4.1.1",
+    "lodash": "^4.17.15",
+    "materialize-css": "^1.0.0",
+    "mithril": "^2.0.4"
   }
 }

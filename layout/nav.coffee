@@ -1,4 +1,6 @@
 import m from 'mithril'
+import materializeCSS from 'materialize-css'
+# import materializeCSS from 'materialize-css'
 import {nav,menu,icon} from '../element'
 
 adminMenuItems = [
