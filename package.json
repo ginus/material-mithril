@@ -1,0 +1,23 @@
+{
+  "name": "material-mithril",
+  "version": "1.0.0",
+  "description": "material design mithril js component",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "coffee build.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ginus/material-mithril.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ginus/material-mithril/issues"
+  },
+  "homepage": "https://github.com/ginus/material-mithril#readme",
+  "dependencies": {
+    "coffeescript": "^2.4.1"
+  }
+}
