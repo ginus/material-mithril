@@ -1,13 +1,13 @@
 import '../node_modules/materialize-css/dist/css/materialize.min.css'
-/* fallback */
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url('materialicons.v42.woff2') format('woff2');
-}
 
-.material-icons {
+/* fallback */
+// @font-face
+//   font-family: 'Material Icons';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url('materialicons.v42.woff2') format('woff2');
+
+.material-icons
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -21,7 +21,6 @@ import '../node_modules/materialize-css/dist/css/materialize.min.css'
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
-}
 
 nav
   margin-bottom: 1rem

@@ -36,7 +36,7 @@ teacherMenuItems = [
 
 export default
   oninit:({state,attrs})->
-    attrs.nav.class ?= 'lime accent-3'
+    attrs.nav?.class ?= 'lime accent-3'
     # if user.info.isRoleAdmin
     #   state.userLable = '管理员'
     #   state.menuItems = adminMenuItems

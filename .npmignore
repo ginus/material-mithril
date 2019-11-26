@@ -1,1 +1,3 @@
-build.coffee
+genIndex.coffee
+# Optional parcel cache
+.cache

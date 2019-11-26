@@ -1,13 +1,13 @@
 {
   "name": "material-mithril",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "description": "material design mithril js component",
   "main": "index.coffee",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "index": "coffee genIndex.coffee",
-    "start": "parcel watch index.coffee",
-    "build": "parcel build index.coffee"
+    "start": "parcel watch index.coffee stylus/index.stylus",
+    "build": "parcel build index.coffee stylus/index.stylus"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
     "lodash": "^4.17.15",
     "materialize-css": "^1.0.0",
     "mithril": "^2.0.4"
+  },
+  "devDependencies": {
+    "stylus": "^0.54.7"
   }
 }
