@@ -4,7 +4,6 @@ import cards from './cards'
 import checkBoxGroup from './checkBoxGroup'
 import checkbox from './checkbox'
 import icon from './icon'
-import index from './index'
 import input from './input'
 import menu from './menu'
 import metric from './metric'
@@ -23,7 +22,6 @@ export default
   'checkBoxGroup': checkBoxGroup
   'checkbox': checkbox
   'icon': icon
-  'index': index
   'input': input
   'menu': menu
   'metric': metric

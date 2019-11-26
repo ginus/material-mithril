@@ -9,11 +9,13 @@ genIndex =(path)->
     exportComs = ['','export default']
     for file in files
       name = file.slice 0,-7
+      continue if name is 'index'
       importComs.push "import #{name} from './#{name}'"
       exportComs.push "  '#{name}': #{name}"
     comStr = importComs.join("\n")+exportComs.join("\n")
     console.log comStr
     fs.writeFile path+'/index.coffee',comStr,(err)->
       throw err if err
-      console.log 'The file has been saved!'
+      console.log path,'/index.coffee has been saved!'
 genIndex './element'
+genIndex './layout'
