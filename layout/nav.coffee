@@ -1,6 +1,4 @@
 import m from 'mithril'
-import materializeCSS from 'materialize-css'
-# import materializeCSS from 'materialize-css'
 import {nav,menu,icon} from '../element'
 
 adminMenuItems = [
@@ -36,7 +34,9 @@ teacherMenuItems = [
 
 export default
   oninit:({state,attrs})->
-    attrs.nav?.class ?= 'lime accent-3'
+    attrs.nav ?= {}
+    nav = attrs.nav
+    nav.class ?= 'lime accent-3'
     # if user.info.isRoleAdmin
     #   state.userLable = '管理员'
     #   state.menuItems = adminMenuItems
