@@ -1,3 +1,3 @@
-import nav from './nav'
+import simple from './simple'
 export default
-  'nav': nav
+  'simple': simple

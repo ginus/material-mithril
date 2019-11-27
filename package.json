@@ -1,6 +1,6 @@
 {
   "name": "material-mithril",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "material design mithril js component",
   "main": "index.coffee",
   "scripts": {
@@ -27,6 +27,7 @@
     "mithril": "^2.0.4"
   },
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "stylus": "^0.54.7"
   }
 }

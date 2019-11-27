@@ -1,22 +1,21 @@
-m = require 'mithril'
-import a from './a'
+import m from 'mithril'
+import {a} from './index'
 
-state =
-  appendActive:(items)->
-    current = m.route.get()
-    for item in items
-      if item.a?.href is current
-        if item.class
-          item.class = item.class + ' active'
-        else
-          item.class = 'active'
+appendActive=(items)->
+  current = m.route.get()
+  for item in items
+    if item.a?.href is current
+      if item.class
+        item.class = item.class + ' active'
+      else
+        item.class = 'active'
 
 module.exports =
-  view:(vnode)->
-    state.appendActive vnode.children
+  view:({attrs,children})->
+    appendActive children
     m 'ul',{
-      class:vnode.attrs.class
-    },vnode.children.map (item)->
+      class:attrs.class
+    },children.map (item)->
       return unless item.a
       m 'li',{
         class:item.class

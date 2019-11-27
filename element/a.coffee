@@ -1,8 +1,8 @@
 import m from 'mithril'
 
 export default
-  view:(vnode)->
-    if vnode.attrs.href
-      m m.route.Link,vnode.attrs,vnode.children
+  view:({attrs,children})->
+    if attrs.href
+      m m.route.Link,attrs,children
     else
-      m 'a',vnode.attrs,vnode.children
+      m 'a',attrs,children
