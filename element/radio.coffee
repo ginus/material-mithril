@@ -1,8 +1,8 @@
-import m from 'mithril'
+m = require 'mithril'
 # import debug from 'debug'
 # see = debug('mmui').extend 'radio'
 
-export default
+module.exports = class
   view:({attrs,children})->
     m 'label.radio',{
       onchange:attrs.onchange

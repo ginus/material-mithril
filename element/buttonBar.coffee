@@ -1,7 +1,7 @@
-import m from 'mithril'
-import icon from './icon'
+m = require 'mithril'
+{icon} = require './index'
 
-export default
+module.exports = class
   view:(vnode)->
     m '.input-field',{
       class:vnode.attrs.class ? 'col s12 offset-s2'

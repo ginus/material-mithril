@@ -1,5 +1,5 @@
-import m from 'mithril'
-import {a} from './index'
+m = require 'mithril'
+{A}  = require './index'
 
 appendActive=(items)->
   current = m.route.get()

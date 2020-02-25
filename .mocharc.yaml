@@ -1,0 +1,8 @@
+recursive: true
+extension: coffee
+watch: true
+growl: true
+require:
+  - coffeescript/register
+  # - mithril
+file: ./test-setup.coffee

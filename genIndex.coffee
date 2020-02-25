@@ -5,14 +5,12 @@ coms={}
 genIndex =(path)->
   fs.readdir path,(err,files)->
     return console.log err if err
-    importComs = []
-    exportComs = ['','export default']
+    exports = ['module.exports =']
     for file in files
       name = file.slice 0,-7
       continue if name is 'index'
-      importComs.push "import #{name} from './#{name}'"
-      exportComs.push "  '#{name}': #{name}"
-    comStr = importComs.join("\n")+exportComs.join("\n")
+      exports.push "  '#{name}': require './#{name}'"
+    comStr = exports.join("\n")
     console.log comStr
     fs.writeFile path+'/index.coffee',comStr,(err)->
       throw err if err

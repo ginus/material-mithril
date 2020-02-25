@@ -1,23 +1,28 @@
-import m from 'mithril'
-import {nav,brand,menu,footer} from '../element/index'
+m = require 'mithril'
+{Nav,Brand,Menu,Footer} = require '../element/index'
 
-export default
-  view:({attrs,children})->
+module.exports =
+  init:({attrs})->
+    # attrs.brand ?= '111'
+  view: ({attrs,children})->
+    console.log 111111111111
+    console.log attrs
+    console.log children
     m '.simple',{
       id:attrs.pageId
     },[
       m 'header',{
         class:'navbar-fixed'
-      },m nav,{
+      },m Nav,{
         class:attrs.class
       },[
-        m brand,{},attrs.brand
-        m menu,{class:'menu'},attrs.menuItems
+        m Brand,{},attrs.brand
+        m Menu,{class:'menu'},attrs.menuItems
       ]
       m 'main',{
 
       },children
-      m footer,{
+      m Footer,{
         copyright:attrs.copyright
       },attrs.footer
     ]

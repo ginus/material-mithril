@@ -1,8 +1,8 @@
-import debug from 'debug'
-see = debug('mmui').extend 'select'
+# import debug from 'debug'
+# see = debug('mmui').extend 'select'
 
-import _ from 'lodash'
-import m from 'mithril'
+# import _ from 'lodash'
+m = require 'mithril'
 
 ins = null
 state =
@@ -16,7 +16,7 @@ state =
     ins = M.FormSelect.init el,opt
     m.redraw()
 
-export default
+module.exports = class
   oncreate:(vnode)->
     see 'create'
     el = document.getElementById vnode.attrs.id

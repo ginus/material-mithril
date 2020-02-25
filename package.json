@@ -3,9 +3,11 @@
   "version": "0.3.4",
   "description": "material design mithril js component",
   "main": "index.coffee",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "index": "coffee genIndex.coffee",
+    "page": "parcel pages/index.html",
     "start": "parcel watch index.coffee stylus/index.stylus",
     "build": "parcel build index.coffee stylus/index.stylus"
   },
@@ -20,14 +22,21 @@
   },
   "homepage": "https://github.com/ginus/material-mithril#readme",
   "dependencies": {
-    "coffeescript": "^2.4.1",
+    "coffeescript": "^2.5.1",
     "debug": "^4.1.1",
     "lodash": "^4.17.15",
     "materialize-css": "^1.0.0",
-    "mithril": "^2.0.4"
+    "mithril": "^2.0.4",
+    "polythene-css": "^1.7.2",
+    "polythene-mithril": "^1.7.2",
+    "pretty-error": "^2.1.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.4",
     "cssnano": "^4.1.10",
+    "esm": "^3.2.25",
+    "jsdom": "^15.2.1",
+    "mithril-query": "^3.1.0",
     "stylus": "^0.54.7"
   }
 }

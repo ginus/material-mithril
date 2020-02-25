@@ -1,10 +1,10 @@
-import m from 'mithril'
-import checkbox from './checkbox'
-import _ from 'lodash'
-import debug from 'debug'
-see = debug('mmui').extend 'checkBoxGroup'
+m = require 'mithril'
+{Checkbox} =require './index'
+{pull} = require 'lodash'
+# import debug from 'debug'
+# see = debug('mmui').extend 'checkBoxGroup'
 
-export default
+module.exports = class
   view:({attrs,children})->
     attrs.value ?= []
     m '.input-field',{
@@ -20,7 +20,7 @@ export default
             if target.checked
               attrs.value.push target.value
             else
-              _.pull attrs.value,target.value
+              pull attrs.value,target.value
         },text
       m 'label',attrs.label
     ]

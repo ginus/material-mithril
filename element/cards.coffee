@@ -1,6 +1,6 @@
-import m from 'mithril'
-import a from './a'
-export default
+m = require 'mithril'
+{a}  = require './index'
+module.exports = class
   view:(vnode)->
     m '.row',vnode.children.map (card)->
       m '.col',{class:vnode.attrs.col ? 's12 m6 l3'},

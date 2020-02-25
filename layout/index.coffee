@@ -1,3 +1,2 @@
-import simple from './simple'
-export default
-  'simple': simple
+module.exports =
+  'Simple': require './Simple'

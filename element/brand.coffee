@@ -1,9 +1,10 @@
-import m from 'mithril'
-import {assign} from 'lodash'
-import {a} from './index'
+m = require 'mithril'
+{assign} = require 'lodash'
+{A}  = require './index'
 
-export default
+module.exports = class
   view:({attrs,children})->
+    console.log attrs,children
     defaultAttrs=
       class: 'brand-logo'
-    m a,assign(defaultAttrs,attrs),children
+    m A,assign(defaultAttrs,attrs),children

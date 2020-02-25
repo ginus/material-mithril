@@ -1,6 +1,6 @@
-import m from 'mithril'
+m = require 'mithril'
 
-export default
+module.exports = class
   view:({attrs,children})->
     m 'footer.page-footer',[
       m '.container',children

@@ -1,8 +1,8 @@
-import m from 'mithril'
-import debug from 'debug'
-see = debug('mmui').extend 'checkBox'
+m = require 'mithril'
+# import debug from 'debug'
+# see = debug('mmui').extend 'checkBox'
 
-export default
+module.exports = class
   view:({attrs,children})->
     m 'label.checkbox',{
       onchange:attrs.onchange

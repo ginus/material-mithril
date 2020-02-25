@@ -1,6 +1,6 @@
-import m from 'mithril'
+m = require 'mithril'
 
-export default
+module.exports = class
   view:(vnode)->
     m '.switch',{
       class:vnode.attrs.class

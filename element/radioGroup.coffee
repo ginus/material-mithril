@@ -1,10 +1,10 @@
-import m from 'mithril'
-import radio from './radio'
-import _ from 'lodash'
-import debug from 'debug'
-see = debug('mmui').extend 'radioGroup'
+m = require 'mithril'
+{Radio}  = require './index'
+# import _ from 'lodash'
+# import debug from 'debug'
+# see = debug('mmui').extend 'radioGroup'
 
-export default
+module.exports = class
   view:({attrs,children})->
     m '.input-field',{
       class:attrs.class ? 'col s12'

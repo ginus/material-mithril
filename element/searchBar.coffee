@@ -1,9 +1,9 @@
-import m from 'mithril'
-import icon from './icon'
+m = require 'mithril'
+{Icon}  = require './index'
 
 state =
   getId:(id)->id ? 'search'
-export default
+module.exports = class
   view:(vnode)->
     m 'form.searchBar',
       m '.input-field',[
