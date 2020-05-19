@@ -1,4 +1,4 @@
-m = require 'mithril'
+import m from 'mithril'
 
 export class A
   view:({attrs,children})->

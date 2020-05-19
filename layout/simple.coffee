@@ -1,7 +1,7 @@
 m = require 'mithril'
 {Nav,Brand,Menu,Footer} = require '../element/index'
 
-module.exports =
+export Simple =
   init:({attrs})->
     # attrs.brand ?= '111'
   view: ({attrs,children})->
