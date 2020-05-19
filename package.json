@@ -4,6 +4,9 @@
   "description": "material design mithril js component",
   "main": "index.coffee",
   "type": "module",
+  "bin": {
+    "mmc": "cli/main.coffee"
+  },
   "scripts": {
     "test": "mocha",
     "index": "coffee genIndex.coffee",

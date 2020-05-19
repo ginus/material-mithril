@@ -1,4 +1,4 @@
-module.exports =
+export * from
   'A': require './A'
   'Brand': require './Brand'
   'ButtonBar': require './ButtonBar'

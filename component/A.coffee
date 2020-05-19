@@ -1,6 +1,6 @@
 m = require 'mithril'
 
-module.exports = class A
+export class A
   view:({attrs,children})->
     if attrs.href
       m m.route.Link,attrs,children
