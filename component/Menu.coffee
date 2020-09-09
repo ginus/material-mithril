@@ -1,4 +1,4 @@
-m = require 'mithril'
+import m from 'mithril'
 {A}  = require './index'
 
 appendActive=(items)->
@@ -10,7 +10,7 @@ appendActive=(items)->
       else
         item.class = 'active'
 
-module.exports =
+export class Menu
   view:({attrs,children})->
     appendActive children
     m 'ul',{
@@ -20,4 +20,4 @@ module.exports =
       m 'li',{
         class:item.class
         click:item.click
-      },m a,item.a,item.children
+      }, m A, item.a, item.children

@@ -1,4 +1,4 @@
-m = require 'mithril'
+import m from 'mithril'
 
 module.exports = class
   view:(vnode)->

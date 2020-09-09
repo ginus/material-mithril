@@ -1,6 +1,6 @@
-m = require 'mithril'
+import m from 'mithril'
 
-module.exports = class
+module.exports = class Table
   view:(vnode)->
     m 'table',{
       class:vnode.attrs.class ? 'highlight striped responsive-table'

@@ -1,6 +1,7 @@
-m = require 'mithril'
-{a}  = require './index'
-module.exports = class
+import m from 'mithril'
+import {A} from '../index'
+
+exports = class
   view:(vnode)->
     m '.row',vnode.children.map (card)->
       m '.col',{class:vnode.attrs.col ? 's12 m6 l3'},
@@ -10,5 +11,5 @@ module.exports = class
             m 'p',m.trust card.content
           ]
           m '.card-action',card.actions.map (action)->
-            m a,{href:action.href},action.text
+            m A,{href:action.href},action.text
         ]

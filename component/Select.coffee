@@ -2,7 +2,7 @@
 # see = debug('mmui').extend 'select'
 
 # import _ from 'lodash'
-m = require 'mithril'
+import m from 'mithril'
 
 ins = null
 state =

@@ -1,8 +1,8 @@
 import m from 'mithril'
 
 export class A
-  view:({attrs,children})->
+  view:({attrs, children})->
     if attrs.href
-      m m.route.Link,attrs,children
+      m m.route.Link, attrs, children
     else
-      m 'a',attrs,children
+      m 'a', attrs, children

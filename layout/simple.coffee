@@ -1,5 +1,5 @@
-m = require 'mithril'
-{Nav,Brand,Menu,Footer} = require '../element/index'
+import m from 'mithril'
+# {Nav,Brand,Menu,Footer} = require '..//index'
 
 export Simple =
   init:({attrs})->

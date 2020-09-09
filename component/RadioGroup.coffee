@@ -1,4 +1,4 @@
-m = require 'mithril'
+import m from 'mithril'
 {Radio}  = require './index'
 # import _ from 'lodash'
 # import debug from 'debug'

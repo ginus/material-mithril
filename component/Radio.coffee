@@ -1,4 +1,4 @@
-m = require 'mithril'
+import m from 'mithril'
 # import debug from 'debug'
 # see = debug('mmui').extend 'radio'
 

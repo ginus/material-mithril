@@ -1,5 +1,5 @@
 mq = require 'mithril-query'
-brand = require '../element/Brand'
+brand = require '../component/Brand'
 
 describe "brand", ->
   it 'brand-logo',->

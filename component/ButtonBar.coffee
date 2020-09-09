@@ -1,5 +1,5 @@
-m = require 'mithril'
-{icon} = require './index'
+import m from 'mithril'
+import {Icon} from '../index'
 
 module.exports = class
   view:(vnode)->
@@ -11,6 +11,6 @@ module.exports = class
         type:btn.type ? 'button'
         onclick:btn.onclick
       },[
-        m icon,{class:'left'},btn.icon if btn.icon
+        m Icon,{class:'left'},btn.icon if btn.icon
         btn.text
       ]

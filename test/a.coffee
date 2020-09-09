@@ -1,5 +1,5 @@
 mq = require 'mithril-query'
-a = require '../element/A'
+a = require '../component/A'
 
 describe "A", ->
   it 'herf',->

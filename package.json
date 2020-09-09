@@ -25,11 +25,14 @@
   },
   "homepage": "https://github.com/ginus/material-mithril#readme",
   "dependencies": {
+    "bluebird": "^3.7.2",
     "coffeescript": "^2.5.1",
     "debug": "^4.1.1",
+    "js-yaml": "^3.14.0",
     "lodash": "^4.17.15",
     "materialize-css": "^1.0.0",
     "mithril": "^2.0.4",
+    "mmsvg": "^1.5.3",
     "polythene-css": "^1.7.2",
     "polythene-mithril": "^1.7.2",
     "pretty-error": "^2.1.1"

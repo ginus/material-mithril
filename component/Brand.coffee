@@ -1,10 +1,9 @@
-m = require 'mithril'
-{assign} = require 'lodash'
-{A}  = require './index'
+import m from 'mithril'
+import { defaultsDeep } from 'lodash'
+import {A} from '../index'
 
-module.exports = class
-  view:({attrs,children})->
-    console.log attrs,children
-    defaultAttrs=
+export class brand
+  view:({attrs, children})->
+    m A, defaultsDeep({}, attrs, {
       class: 'brand-logo'
-    m A,assign(defaultAttrs,attrs),children
+    }), children
