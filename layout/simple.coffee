@@ -1,7 +1,7 @@
 import m from 'mithril'
 # {Nav,Brand,Menu,Footer} = require '..//index'
 
-export Simple =
+export SimpleLayout =
   init:({attrs})->
     # attrs.brand ?= '111'
   view: ({attrs,children})->
