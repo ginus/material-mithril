@@ -1,7 +1,6 @@
-#扩展组件行为
+#自动选中
 import m from 'mithril'
 
-# 自动选中
 # 使用mithril路由判断选中
 export AutoSelectByRoute = (route, button)->
   button.element = m.route.Link

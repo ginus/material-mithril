@@ -1,5 +1,5 @@
 # 行为
-export * from './component/Behaviour.coffee'
+export * from './behaviour/AutoSelect.coffee'
 # 表单
 export * from './form/Form.coffee'
 export * from './form/Button.coffee'
