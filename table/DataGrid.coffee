@@ -1,13 +1,7 @@
-import m from 'mithril'
-import { defaultsDeep } from 'lodash'
-# 表格标题
-export TCol =
+export DataTable =
   view:({attrs})->
 
-    m 'tr',attrs.row,
-
-# 根据集合输出表格
-export Table =
+export Table2 =
   oninit:({attrs,state})->
 
   view:({attrs,state})->
@@ -31,7 +25,3 @@ export Table =
       #     vnode.attrs.th.map (th)->
       #       m 'th',th
     ]
-
-export DataTable =
-  view:({attrs})->
-

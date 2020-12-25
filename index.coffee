@@ -1,8 +1,8 @@
 # 行为
-export * from './behaviour/AutoSelect.coffee'
+export * from './behaviour/AutoSelect'
 # 表单
-export * from './form/Form.coffee'
-export * from './form/Button.coffee'
+export * from './form/Form'
+export * from './form/Button'
 export * from './form/Input.coffee'
 
 export * from './model/User.coffee'
@@ -20,7 +20,8 @@ export * from './layout/Admin'
 # export * from './component/CheckBoxGroup'
 # export * from './component/Checkbox'
 # export * from './component/Footer'
-export * from './component/MDIcon.coffee'
+export * from './component/Dropdown'
+export * from './component/MDIcon'
 # export * from ''
 # export * from './component/Input'
 # export * from './component/Menu'

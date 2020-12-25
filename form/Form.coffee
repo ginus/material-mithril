@@ -1,11 +1,10 @@
 import m from 'mithril'
 import stream from 'mithril/stream'
-import { DialogPane, Icon } from "polythene-mithril"
-import {Shadow} from 'polythene-mithril'
+import {DialogPane, Icon, Shadow } from "polythene-mithril"
 import {AccountInput, PasswordInput} from './Input'
-import {PrimaryButton} from './Button'
-import { defaultsDeep } from 'lodash'
-import { addTypography } from "polythene-css"
+import {PrimaryButton } from './Button'
+import {defaultsDeep } from 'lodash'
+import {addTypography } from "polythene-css"
 addTypography()
 
 export Form =
