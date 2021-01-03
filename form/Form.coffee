@@ -4,26 +4,26 @@ import {DialogPane, Icon, Shadow } from "polythene-mithril"
 import {AccountInput, PasswordInput} from './Input'
 import {PrimaryButton } from './Button'
 import {defaultsDeep } from 'lodash'
-import {addTypography } from "polythene-css"
-addTypography()
+# import {addTypography } from "polythene-css"
+# addTypography()
 
 export Form =
   view:({attrs})->
     m DialogPane, defaultsDeep attrs
 
 export InlineForm =
-  view: ({attrs})->
+  view: ({attrs}) ->
     m 'form.inline'
 
 export LoginForm =
-  view:({attrs})->
+  view: ({ attrs }) ->
     m Form, {
-      body:[
+      body: [
         m AccountInput, attrs.account
         m PasswordInput, attrs.password
       ]
       footer: [
-        m PrimaryButton, defaultsDeep attrs.login,{
+        m PrimaryButton, defaultsDeep attrs.login, {
           label: '登录'
         }
         m 'a', defaultsDeep attrs.reg, {
@@ -34,27 +34,27 @@ export LoginForm =
     }
 
 export RegForm =
-  view: ({attrs})->
+  view: ({ attrs }) ->
     m Form, {
-      body:[
+      body: [
         m AccountInput, attrs.account
         m PasswordInput, attrs.password
         m PasswordInput, attrs.passwordRepeat
       ]
-      footerButtons:[
+      footerButtons: [
         m PrimaryButton, attrs.regButton
       ]
     }
 
 export ChangePasswordForm =
-  view: ({attrs})->
-    m Form,{
-      body:[
+  view: ({attrs}) ->
+    m Form, {
+      body: [
         m PasswordInput, attrs.oldPassword
         m PasswordInput, attrs.password
         m PasswordInput, attrs.passwordRepeat
       ]
-      footerButtons:[
+      footerButtons: [
         m saveButton, attrs.save
       ]
     }
