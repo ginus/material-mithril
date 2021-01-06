@@ -3,8 +3,9 @@ import m from "mithril";
 export let PaginationContainer = {
   oninit: ({ state }) => {
     state.params = (params) => {
-      params.total = Math.ceil(params.count / params.limit);
-      params.current = Math.ceil(params.skip / params.limit);
+      let query = params.query;
+      params.total = Math.ceil(params.count / query.limit);
+      params.current = Math.floor(query.skip / query.limit) + 1;
     };
   },
   view: ({ attrs, state, children }) => {

@@ -5,7 +5,7 @@
 // 分页路由处理
 import m from "mithril";
 import { SkipPrevButton, SkipNextButton } from "./skip";
-import { TextLimit } from "./limit";
+// import { TextLimit } from "./limit";
 import { defaultsDeep, pick } from "lodash";
 import { PaginationText } from "./text";
 import { PaginationContainer } from "./container";
@@ -19,8 +19,7 @@ export let ShortPagination = {
     ]);
   },
 };
-// export let
-// 处理
+// 标准分页
 export let Pagination = {
   oninit: ({ attrs, state }) => {
     attrs.total = Math.ceil(attrs.count / attrs.limit);

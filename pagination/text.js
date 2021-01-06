@@ -13,7 +13,7 @@ export let PaginationText = {
   },
   view: ({ attrs, state }) => {
     return m(
-      "div.mm-pagination_text",
+      "span.mm-pagination_text",
       attrs.text,
       state.compiled(attrs.params)
     );

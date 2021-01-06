@@ -1,5 +1,5 @@
 import { Button } from "polythene-mithril";
-import { defaultsDeep } from "lodash";
+import { clone, defaultsDeep, pick } from "lodash";
 import m from "mithril";
 
 export let SkipButton = {
@@ -12,22 +12,15 @@ export let SkipButton = {
     state.defaultAttrs = (params) => {
       return {
         class: "mm-pagination_skip",
-        // label: params.current,
-
-        // url: {
-        //   href: state.href(params.skip),
-        // },
+        label: params.current,
+        url: {
+          href: m.buildPathname(params.path, params.query),
+        },
       };
-    };
-    state.href = () => {
-      return attrs.href + params.skip;
-    };
-    state.params = (params) => {
-      return {};
     };
   },
   view: ({ attrs, state }) => {
-    let params = state.params(attrs.params);
+    let params = attrs.params;
     return m(
       Button,
       defaultsDeep(
@@ -52,16 +45,19 @@ export let SkipPrevButton = {
       };
     };
     state.params = (params) => {
-      let skip = params.skip - params.limit;
+      let query = params.query;
+      let skip = query.skip - query.limit;
       if (skip < 0) skip = 0;
-      return {
-        skip,
-        disabled: skip == params.skip,
-      };
+      return defaultsDeep(
+        {
+          query: { skip },
+          disabled: skip == query.skip,
+        },
+        params
+      );
     };
   },
   view: ({ attrs, state }) => {
-    console.log(state.params);
     let params = state.params(attrs.params);
     return m(SkipButton, {
       skipButton: defaultsDeep(
@@ -87,11 +83,15 @@ export let SkipNextButton = {
       };
     };
     state.params = (params) => {
-      let skip = params.skip + params.limit;
-      return {
-        skip,
-        disabled: skip > params.count,
-      };
+      let query = params.query;
+      let skip = query.skip + query.limit;
+      return defaultsDeep(
+        {
+          query: { skip },
+          disabled: skip > params.count,
+        },
+        params
+      );
     };
   },
   view: ({ attrs, state }) => {

@@ -1,6 +1,6 @@
 {
   "name": "material-mithril",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "material design mithril js component",
   "main": "index.coffee",
   "type": "module",
@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/ginus/material-mithril#readme",
   "dependencies": {
-    "@material/data-table": "^7.0.0",
     "@mdi/js": "^5.5.55",
     "bluebird": "^3.7.2",
     "coffeescript": "^2.5.1",
