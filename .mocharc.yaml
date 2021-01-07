@@ -3,6 +3,6 @@ extension: coffee
 watch: true
 growl: true
 require:
-  - coffeescript/register
+  # - coffeescript/register
   # - mithril
-file: ./test-setup.coffee
+file: ./test-setup.js

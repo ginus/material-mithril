@@ -9,7 +9,9 @@ import { SkipPrevButton, SkipNextButton } from "./skip";
 import { defaultsDeep, pick } from "lodash";
 import { PaginationText } from "./text";
 import { PaginationContainer } from "./container";
-// 上一页 页码/总页数 下一页
+/**
+ * 上一页 页码/总页数 下一页
+ */
 export let ShortPagination = {
   view: ({ attrs }) => {
     return m(PaginationContainer, pick(attrs, ["container", "params"]), [
@@ -19,7 +21,9 @@ export let ShortPagination = {
     ]);
   },
 };
-// 标准分页
+/**
+ * 标准分页
+ */
 export let Pagination = {
   oninit: ({ attrs, state }) => {
     attrs.total = Math.ceil(attrs.count / attrs.limit);
