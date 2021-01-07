@@ -1,15 +1,14 @@
 {
   "name": "material-mithril",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "material design mithril js component",
-  "main": "index.coffee",
+  "main": "index.js",
   "type": "module",
   "bin": {
-    "mmc": "cli/main.coffee"
+    "mmc": "cli/main.js"
   },
   "scripts": {
     "test": "mocha",
-    "page": "parcel pages/index.html",
     "start": "parcel watch index.coffee stylus/index.stylus",
     "build": "parcel build index.coffee stylus/index.stylus"
   },
@@ -26,7 +25,6 @@
   "dependencies": {
     "@mdi/js": "^5.5.55",
     "bluebird": "^3.7.2",
-    "coffeescript": "^2.5.1",
     "debug": "^4.1.1",
     "js-yaml": "^3.14.0",
     "lodash": "^4.17.20",
