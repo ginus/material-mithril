@@ -70,7 +70,6 @@ export var AdminLayout = {
     }
   },
   view: function ({ attrs, state, children }) {
-    console.log(attrs.userMenu);
     return m('.admin.layout.vertical.pe-fullbleed', [
       m(Toolbar, [
         m(ToolbarTitle, attrs.title),
@@ -78,22 +77,7 @@ export var AdminLayout = {
           attrs.nav,
           state.defaultNav,
         )),
-        m(UserBar, attrs.userBar),
-        // m(Button, defaultsDeep(
-        //   state.safeUser,
-        //   attrs.user,
-        // )),
-        // m(Menu, defaultsDeep(
-        //   state.safeMenu,
-        //   {
-        //     content: m(List, attrs.userMenu)
-        //   }
-
-        //   // m(List, defaultsDeep(
-        //   //   attrs.userMenu,
-        //   //   state.defaultUserMenu
-        //   // ))
-        // ))
+        m(UserBar, attrs.userBar)
       ]),
       m('.main.flex.one', defaultsDeep(
         attrs.main,
