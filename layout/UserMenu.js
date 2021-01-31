@@ -5,7 +5,6 @@ import { Menu, Button, List, ListTile } from 'polythene-mithril'
 export let UserMenu = {
   oninit: ({ state }) => {
     state.safeAttrs = {
-      target: '#mm_user_button',
       origin: 'top right',
       offsetV: '80px',
       // show: state.show,
