@@ -1,8 +1,8 @@
 import m from 'mithril'
 import { } from 'polythene-mithril';
 import { UserButton } from './UserButton';
-// import { UserMenu } from './UserMenu';
-import { merge, omit } from "lodash";
+import { UserMenu } from './UserMenu';
+import { merge, omit, pick } from "lodash";
 
 export let UserBar = {
   oninit: ({ state }) => {
@@ -16,14 +16,11 @@ export let UserBar = {
     };
   },
   view: ({ attrs, state }) => {
-    console.log(attrs);
     attrs = merge({}, state.defaultAttrs, attrs, state.safeAttrs);
-    console.log(attrs);
-    let childrenAttrs = omit(attrs, ['userButton', 'userMenu']);
-    console.log(attrs);
-    return m('.mm-user_bar', attrs, [
-      m(UserButton, childrenAttrs.userButton),
-      // m(UserMenu, attrs.userMenu)
+    let _attrs = omit(attrs, ['userButton', 'userMenu'])
+    return m('.mm-user_bar', _attrs, [
+      m(UserButton, attrs.userButton),
+      m(UserMenu, attrs.userMenu)
     ]);
   }
 }

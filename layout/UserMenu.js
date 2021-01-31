@@ -1,6 +1,6 @@
 import { defaultsDeep } from "lodash";
 import m from "mithril";
-import { Button, List, ListTile } from 'polythene-mithril'
+import { Menu, Button, List, ListTile } from 'polythene-mithril'
 
 export let UserMenu = {
   oninit: ({ state }) => {
