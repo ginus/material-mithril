@@ -1,6 +1,6 @@
 {
   "name": "material-mithril",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "material design mithril js component",
   "main": "index.js",
   "type": "module",
@@ -8,9 +8,7 @@
     "mmc": "cli/main.js"
   },
   "scripts": {
-    "test": "mocha",
-    "start": "parcel watch index.coffee stylus/index.stylus",
-    "build": "parcel build index.coffee stylus/index.stylus"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

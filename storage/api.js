@@ -2,7 +2,7 @@ import { request } from 'mithril';
 import { getToken } from './token';
 
 let apiHost = localStorage.getItem("apiHost");
-let hostUrl = (path) => {
+export let hostUrl = (path) => {
   return apiHost + path;
 };
 /**
