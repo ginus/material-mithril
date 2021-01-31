@@ -6,7 +6,10 @@ import {
   ToolbarTitle,
   Tabs,
   IconButton,
-  SVG
+  Button,
+  Menu,
+  List,
+  ListTile
 } from "polythene-mithril";
 
 import {
@@ -23,39 +26,79 @@ import {
   MDIcon,
   mdiAccount
 } from '../component/MDIcon';
+import { UserBar } from './UserBar';
 
 export var AdminLayout = {
-  init: function({attrs}) {},
-  view: function({attrs, children}) {
-    defaultsDeep(attrs, {
-      navTabs: {
-        tabs: []
+  oninit: function ({ attrs, state }) {
+    state.show = false;
+    state.defaultNav = {
+      tabs: []
+    };
+    state.safeUser = {
+      id: 'mm_user_button',
+      icon: {
+        svg: {
+          content: m(MDIcon, mdiAccount)
+        }
       },
-      user: {
-        icon: {
-          svg: {
-            content: m(MDIcon, mdiAccount)
-          }
+      dropdown: {
+        show: state.show
+      },
+      events: {
+        onclick: (e) => {
+          state.show = !state.show;
         }
       }
-    });
-    return m('.admin.layout.vertical.pe-fullbleed', {
-      id: attrs.pageId
-    }, [
-      m(Toolbar,
-      [m(ToolbarTitle,
-      attrs.title),
-      m(Tabs,
-      attrs.navTabs),
-      m(IconButton,
-      attrs.user)]),
-      m('.main.flex.one',
-      {
-        style: {
-          'background-color': '#eee'
-        }
+    };
+    state.defaultUserMenu = {
+      tiles: []
+    };
+    state.safeMenu = {
+      target: '#mm_user_button',
+      origin: 'top right',
+      offsetV: '80px',
+      // show: state.show,
+      show: true,
+      didHide: function () {
+        state.show = false;
       },
-      children)
+    };
+    state.defaultMain = {
+      style: {
+        'background-color': '#eee'
+      }
+    }
+  },
+  view: function ({ attrs, state, children }) {
+    console.log(attrs.userMenu);
+    return m('.admin.layout.vertical.pe-fullbleed', [
+      m(Toolbar, [
+        m(ToolbarTitle, attrs.title),
+        m(Tabs, defaultsDeep(
+          attrs.nav,
+          state.defaultNav,
+        )),
+        m(UserBar, attrs.userBar),
+        // m(Button, defaultsDeep(
+        //   state.safeUser,
+        //   attrs.user,
+        // )),
+        // m(Menu, defaultsDeep(
+        //   state.safeMenu,
+        //   {
+        //     content: m(List, attrs.userMenu)
+        //   }
+
+        //   // m(List, defaultsDeep(
+        //   //   attrs.userMenu,
+        //   //   state.defaultUserMenu
+        //   // ))
+        // ))
+      ]),
+      m('.main.flex.one', defaultsDeep(
+        attrs.main,
+        state.defaultMain
+      ), children)
     ]);
   }
 };
