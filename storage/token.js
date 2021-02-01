@@ -4,7 +4,7 @@
  */
 export let getToken = () => {
   let remembered = localStorage.getItem("auth_token_remembered");
-  if (remembered) return localStorage.getItem("auth_token");
+  if (remembered == 'true') return localStorage.getItem("auth_token");
   return sessionStorage.getItem("auth_token");
 };
 /**
