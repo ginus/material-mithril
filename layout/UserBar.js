@@ -15,12 +15,15 @@ export let UserBar = {
         events: {
           onclick: (e) => {
             state.show = !state.show;
+            console.log(state.show);
+            m.redraw();
           }
         }
       },
       userMenu: {
         target: '#mm-user_button',
         show: state.show,
+        // show: true,
         didHide: () => {
           state.show = false;
         }

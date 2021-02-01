@@ -18,6 +18,8 @@ export let UserMenu = {
     };
   },
   view: ({ attrs, state }) => {
-    return m(Menu, defaultsDeep(state.safeAttrs, attrs, state.defaultAttrs));
+    console.log(attrs);
+    let _attrs = defaultsDeep({}, state.safeAttrs, attrs, state.defaultAttrs)
+    return m(Menu, _attrs);
   }
 }
