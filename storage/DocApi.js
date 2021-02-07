@@ -1,5 +1,5 @@
 import { request } from 'mithril';
-import { getToken } from './token';
+import { getToken } from './Auth';
 
 let apiHost = localStorage.getItem("apiHost");
 export let hostUrl = (path) => {

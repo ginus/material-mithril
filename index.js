@@ -8,8 +8,8 @@ export * from './layout/Admin';
 export * from './component/Dropdown';
 export * from './component/MDIcon';
 export * from './pagination/pagination';
-export * from './storage/token';
-export * from './storage/api'
+export * from './storage/Auth';
+export * from './storage/DocApi'
 // export * from ''
 // export * from './component/Input'
 // export * from './component/Menu'
