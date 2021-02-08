@@ -1,4 +1,5 @@
 import m from 'mithril'
+import Stream from 'mithril/stream'
 import { UserButton } from './UserButton';
 import { UserMenu } from './UserMenu';
 import { merge, omit } from "lodash";
@@ -7,16 +8,28 @@ export let UserBar = {
   oninit: ({ state }) => {
     state.show = false;
     state.safeAttrs = () => ({
+
+      // onmouseover: () => {
+      //   state.show = true;
+      //   console.log('onmouseover ' + state.show);
+      // },
       userButton: {
         id: 'mm-user_button',
         dropdown: {
-          open: state.show
+          open: false
         },
         events: {
+          onmouseover: () => {
+            state.show = true;
+            console.log('onmouseover ' + state.show);
+          },
           onclick: (e) => {
-            state.show = !state.show;
-            console.log(state.show);
-            m.redraw();
+            state.show = true;
+            console.log('click ' + state.show);
+
+
+
+            // m.redraw();
           }
         }
       },
@@ -25,7 +38,12 @@ export let UserBar = {
         show: state.show,
         // show: true,
         didHide: () => {
-          state.show = false;
+          setTimeout(() => {
+            state.show = false;
+            console.log('didHide ' + state.show);
+          }, 100);
+
+          // m.redraw();
         }
       }
     });
@@ -37,11 +55,11 @@ export let UserBar = {
     };
   },
   view: ({ attrs, state }) => {
-    attrs = merge({}, state.defaultAttrs, attrs, state.safeAttrs());
-    let _attrs = omit(attrs, ['userButton', 'userMenu'])
+    let attrs2 = merge({}, state.defaultAttrs, attrs, state.safeAttrs());
+    let _attrs = omit(attrs2, ['userButton', 'userMenu'])
     return m('.mm-user_bar', _attrs, [
-      m(UserButton, attrs.userButton),
-      m(UserMenu, attrs.userMenu)
+      m(UserButton, attrs2.userButton),
+      m(UserMenu, attrs2.userMenu)
     ]);
   }
 }

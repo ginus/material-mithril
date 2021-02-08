@@ -11,12 +11,10 @@ export let UserButton = {
         attrs.label
       ],
     };
-    state.defaultAttrs = {
-      // content: [m(MDIcon, mdiAccount)]
-    }
+    // state.defaultAttrs = {
+    // }
   },
   view: ({ attrs, state }) => {
-    attrs = merge({}, state.defaultAttrs, attrs, state.safeAttrs);
-    return m(Button, attrs);
+    return m(Button, merge({}, attrs, state.safeAttrs));
   }
 }

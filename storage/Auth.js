@@ -7,11 +7,11 @@ import { indexOf } from "lodash";
  */
 export let setItem = (key, value, remember) => {
   if (remember) {
-    localStorage.setItem("auth_remembered", true);
+    localStorage.setItem("auth_remembered", 'true');
     localStorage.setItem(key, value);
     sessionStorage.removeItem(key);
   } else {
-    localStorage.setItem("auth_remembered", false);
+    localStorage.setItem("auth_remembered", '');
     localStorage.removeItem(key);
     sessionStorage.setItem(key, value);
   }
@@ -20,7 +20,7 @@ export let setItem = (key, value, remember) => {
  * 读取是否记住
  * @return {boolean} 是否记住
  */
-export let isRemembered = () => Boolean(localStorage.getItem("auth_remembered"));
+export let isRemembered = () => 'true' == localStorage.getItem("auth_remembered");
 /**
  * 读取授权项
  * @param {string} key 键

@@ -5,10 +5,10 @@
  * @returns object
  */
 export let AutoSelectByRoute = (route) => {
-  let href = route.get();
+  let href = route.get().split('/');
   return (button) => {
     button.element = route.Link;
-    button.selected = href === button.url.href;
+    button.selected = (('/' + href[1]) == button.url.href);
     return button;
   }
 };
