@@ -5,11 +5,6 @@ import {
   Toolbar,
   ToolbarTitle,
   Tabs,
-  IconButton,
-  Button,
-  Menu,
-  List,
-  ListTile
 } from "polythene-mithril";
 
 import {
@@ -22,52 +17,14 @@ import {
 
 addLayoutStyles();
 
-import {
-  MDIcon,
-  mdiAccount
-} from '../component/MDIcon';
 import { UserBar } from './UserBar';
 
 export var AdminLayout = {
   oninit: function ({ attrs, state }) {
-    state.show = false;
     state.defaultNav = {
-      tabs: []
+      tabs: [],
+      activeSelected: true,
     };
-    state.safeUser = {
-      id: 'mm_user_button',
-      icon: {
-        svg: {
-          content: m(MDIcon, mdiAccount)
-        }
-      },
-      dropdown: {
-        show: state.show
-      },
-      events: {
-        onclick: (e) => {
-          state.show = !state.show;
-        }
-      }
-    };
-    state.defaultUserMenu = {
-      tiles: []
-    };
-    state.safeMenu = {
-      target: '#mm_user_button',
-      origin: 'top right',
-      offsetV: '80px',
-      // show: state.show,
-      show: true,
-      didHide: function () {
-        state.show = false;
-      },
-    };
-    state.defaultMain = {
-      style: {
-        'background-color': '#eee'
-      }
-    }
   },
   view: function ({ attrs, state, children }) {
     return m('.admin.layout.vertical.pe-fullbleed', [

@@ -1,5 +1,5 @@
 import m from 'mithril'
-import Stream from 'mithril/stream'
+
 import { UserButton } from './UserButton';
 import { UserMenu } from './UserMenu';
 import { merge, omit } from "lodash";
@@ -8,11 +8,6 @@ export let UserBar = {
   oninit: ({ state }) => {
     state.show = false;
     state.safeAttrs = () => ({
-
-      // onmouseover: () => {
-      //   state.show = true;
-      //   console.log('onmouseover ' + state.show);
-      // },
       userButton: {
         id: 'mm-user_button',
         dropdown: {
@@ -37,11 +32,13 @@ export let UserBar = {
         target: '#mm-user_button',
         show: state.show,
         // show: true,
-        didHide: () => {
-          setTimeout(() => {
-            state.show = false;
-            console.log('didHide ' + state.show);
-          }, 100);
+        didHide: (args) => {
+          console.log(args);
+          state.show = false;
+          // setTimeout(() => {
+          //   state.show = false;
+          //   console.log('didHide ' + state.show);
+          // }, 100);
 
           // m.redraw();
         }
