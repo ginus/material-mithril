@@ -1,12 +1,9 @@
 {
   "name": "material-mithril",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "material design mithril js component",
   "main": "index.js",
   "type": "module",
-  "bin": {
-    "mmc": "cli/main.js"
-  },
   "scripts": {
     "test": "mocha"
   },
