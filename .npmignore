@@ -1,2 +1,3 @@
 # Optional parcel cache
 .cache
+.vscode
