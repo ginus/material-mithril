@@ -32,7 +32,7 @@
     "@babel/core": "^7.8.4",
     "cssnano": "^4.1.10",
     "esm": "^3.2.25",
-    "jsdom": "^15.2.1",
+    "jsdom": "^16.5.0",
     "mithril-query": "^3.1.0",
     "stylus": "^0.54.7"
   }
